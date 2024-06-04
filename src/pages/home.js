@@ -4,16 +4,23 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Home = () =>{
     const [users,setUsers] = useState([])
-    
+    const navigate =useNavigate()
     const getAllUsers = async() =>{
         const getdata =await axios.get('http://localhost:3030/users')
         setUsers(getdata.data)    
     }
 
+
     useEffect(() =>{
         getAllUsers()
+        if(localStorage.getItem('userInfo') === null){
+            navigate('/login')
+        }
     },[])
-    
+    const handleLogout = () =>{
+        localStorage.removeItem('userInfo')
+        navigate('/login')
+    }
     return(
         <>
             <h3 >Home component 
@@ -21,6 +28,7 @@ const Home = () =>{
                     <Link to={'add-user'} className="btn btn-success">
                         Add Users
                     </Link>
+                    <button onClick={handleLogout}>Logout</button>
                 </span>
             </h3>
             <table className="table">

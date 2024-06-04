@@ -1,6 +1,5 @@
 {
   "users": [
-    {},
     {
       "id": "d33f0471-3cb5-4497-9ae7-1b58dec6b4c3",
       "name": "Abdul Hayee Khan",
@@ -25,6 +24,11 @@
       "id": "9f241782-d2d3-48ee-8ad1-e4bc8c3ab4b4",
       "name": "Ali Ahmad",
       "email": "aliahmad@gmail.com"
+    },
+    {
+      "id": "e659d5dd-1141-4d35-94fd-b4d49c52c791",
+      "name": "abdulhayee",
+      "email": "test@gamil.com"
     }
   ]
 }

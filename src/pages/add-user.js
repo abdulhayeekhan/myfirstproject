@@ -43,7 +43,7 @@ const AddUser = () =>{
                 </div> */}
                 <div className="form-group" >
                     <label>Name</label>
-                    <input type="text" value={name} onChange={e=> setName(e.target.value)} className="form-control"></input>
+                    <input type="text" name="myname" value={name} onChange={e=> setName(e.target.value)} className="form-control"></input>
                 </div>
 
                 <div className="form-group" >
